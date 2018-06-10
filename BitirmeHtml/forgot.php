@@ -45,16 +45,15 @@ body{
     <span class="logmod__close">Close</span>
     <div class="logmod__container">
       <ul class="logmod__tabs">
-        <li data-tabtar="lgm-2"><a href="#">Login</a></li>
-        <li data-tabtar="lgm-1"><a href="#">Sign Up</a></li>
+        <li data-tabtar="lgm-1"><a href="#">Forgot Password</a></li>
       </ul>
       <div class="logmod__tab-wrapper">
       <div class="logmod__tab lgm-1">
         <div class="logmod__heading">
-          <span class="logmod__heading-subtitle">Enter your personal details <strong>to create an acount</strong></span>
+          <span class="logmod__heading-subtitle">Enter your personal details <strong>to learn password</strong></span>
         </div>
         <div class="logmod__form">
-          <form accept-charset="utf-8" action="register.php" class="simform" method="POST">
+          <form accept-charset="utf-8" action="passfor.php" class="simform" method="POST">
             <div class="sminputs">
               <div class="input full">
                 <label class="string optional" for="user-name">First Name*</label>
@@ -73,48 +72,14 @@ body{
                 <input class="string optional" maxlength="255" id="user-email" placeholder="Email" type="email" size="50" name="user_mail" />
               </div>
             </div>
-            <div class="sminputs">
-              <div class="input string optional">
-                <label class="string optional" for="user-pw">Password *</label>
-                <input class="string optional" maxlength="255" id="user-pw" placeholder="Password" type="password" size="50" name="user_pass" />
-              </div>
-              <div class="input string optional">
-                <label class="string optional" for="user-pw-repeat">Repeat password *</label>
-                <input class="string optional" maxlength="255" id="user-pw-repeat" placeholder="Repeat password" type="password" size="50" name="user_repass" />
-              </div>
-            </div>
             <div class="simform__actions">
-              <input class="sumbit" name="commit" type="submit" value="Create Account" />
+              <input class="sumbit" name="commit" type="submit" value="Get Password" />
+              <span class="simform__actions-sidetext">By creating an account you agree to our <a class="special" target="_blank" role="link">Terms & Privacy</a></span>
             </div> 
           </form>
         </div> 
+          
       </div>
-      <div class="logmod__tab lgm-2">
-        <div class="logmod__heading">
-          <span class="logmod__heading-subtitle">Enter your email and password <strong>to sign in</strong></span>
-        </div> 
-        <div class="logmod__form">
-          <form accept-charset="utf-8" action="login.php" class="simform" method="POST" >
-            <div class="sminputs">
-              <div class="input full">
-                <label class="string optional" for="user-name">Email*</label>
-                <input class="string optional" maxlength="255" name="user_mail" id="user_mail" placeholder="Email" type="email" size="50"  />
-              </div>
-            </div>
-            <div class="sminputs">
-              <div class="input full">
-                <label class="string optional" for="user-pw">Password *</label>
-                <input class="string optional" maxlength="255" id="user-pw" placeholder="Password" type="password" size="50" name="user_pass" />
-                            <span class="hide-password">Show</span>
-              </div>
-            </div>
-            <div class="simform__actions">
-              <input class="sumbit" name="commit" type="submit" value="Log In" />
-              <span class="simform__actions-sidetext"><a href="forgot.php" class="special" role="link"  >Forgot your password?<br>Click here</a></span>
-            </div> 
-          </form>
-        </div> 
-          </div>
       </div>
     </div>
   </div>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,13 @@
     p{
       float: right;
     }
+  body{
+    background-image: url('4.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
   </style>
 </head>
 	<body onload="myFunction1()">
@@ -15,7 +23,7 @@
 		<p class="logotext">Movie Recommendation System</p></div>
 		
 		<header class="register">
-			<a href="index1.php" class="log">Login/Sign-in</a>
+			<a href="index1.php" class="log">Login/Sign-up</a>
 
 		</header>
     <script language="javascript">
@@ -72,7 +80,7 @@ if (!@$conn=mysqli_connect("127.0.0.1","root","","mrs")){
 }
 
 
-$sql = "SELECT title, poster_path FROM movietable LIMIT 5";
+$sql = "SELECT title, poster_path FROM movietable WHERE vote_average > 8 AND vote_count >20 limit 50";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -92,9 +100,14 @@ $conn->close();
 
     ?>
 </div>
+<br>
+<br>
+<br>
 <marquee id='fee' onmouseover="this.stop()" onmouseout="this.start()" 
  direction="horizontal" scrollamount="10" 
 scrolldelay="60" loop="99999"></marquee>
 <div id="demo"></div>
+
+
 </body>
 </html>
